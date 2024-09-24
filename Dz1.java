@@ -5,7 +5,7 @@ import java.lang.*;
 import java.util.Arrays;
 
 
-public class _1609 {
+public class Dz1 {
 
 	public static void main(String[] args) {
 
