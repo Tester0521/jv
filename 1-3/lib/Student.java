@@ -13,22 +13,16 @@ public class Student {
 		this.grades = new List();
 	}
 
-	public int push(int n) {
+	public void push(int n) {
 		this.grades.push(n);
-
-		return 0;
 	}
 
-	public int replace(int n, int pos) {
+	public void replace(int n, int pos) {
 		this.grades.replace(n, pos);
-
-		return 0;
 	}
 
-	public int fill(int[] arr) {
+	public void fill(int[] arr) {
 		for (int i = 0; i < arr.length; i++) this.grades.push(arr[i]);
-
-		return 0;
 	}
 
 	public int[] grades() {
