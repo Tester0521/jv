@@ -51,7 +51,7 @@ public class Student {
 	}
 
 	public int get_average() {
-		return this.grades.stream().mapToInt(Integer::intValue).sum() / this.grades.size();
+		return (this.grades.size() > 0) ? this.grades.stream().mapToInt(Integer::intValue).sum() / this.grades.size() : 0;
 	}
 
 
