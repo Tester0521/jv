@@ -7,7 +7,7 @@ import lib.Grade;
 public class Student {
 
 	public String name;
-	public List<Integer> grades;
+	private List<Integer> grades;
 
 	public Student(String name, Grade[] arr) {
 		this.name = name;
@@ -37,17 +37,17 @@ public class Student {
 		this.grades.set(pos, n.get_val());
 	}
 
-
-
 	public void fill_grades(Grade[] arr) {
 		for (int i = 0; i < arr.length; i++) this.grades.add(arr[i].get_val());
 	}
 
-	public int[] get_grades() {
-		int[] res = new int[this.grades.size()];
 
-		for (int i = 0; i < this.grades.size(); i++) res[i] = this.grades.get(i);
-		return res;
+	public int[] get_grades() {
+		// int[] res = new int[this.grades.size()];
+
+		// for (int i = 0; i < this.grades.size(); i++) res[i] = this.grades.get(i);
+		// return res;
+		return this.grades.stream().mapToInt(Integer::intValue).toArray();
 	}
 
 	public int get_average() {
@@ -59,8 +59,6 @@ public class Student {
 	public String isFullSupport() {
 		return (get_average() == 5) ? "отличник" : "не отличник";
 	}
-
-
 
 	public String toString() {
 		return "\nStudent: \n\t> " + this.name + "\n\t> " + this.grades.toString() + "\n";

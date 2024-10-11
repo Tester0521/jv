@@ -1,7 +1,7 @@
 package lib;
 
 public enum Grade {
-	Two(2), Three(3), Four(4), Five(5);
+	two(2), three(3), four(4), five(5);
 
 	private final int v;
 

@@ -52,15 +52,17 @@ public class Main {
 		Student st1 = new Student("Vasya");
 		Student st2 = new Student("Peter");
 
-		st1.push(Grade.Two);
-		st1.push(Grade.Three);
-		st1.push(Grade.Four);
+		st1.push(Grade.two);
+		st1.push(Grade.three);
+		st1.push(Grade.four);
 
-		st2.push(Grade.Five);
-		st2.push(Grade.Five);
+		st2.push(Grade.five);
+		st2.push(Grade.five);
 
 		System.out.println(st1.toString());
 		System.out.println(st2.toString());
+
+		// Grade test = new Grade(2);
 		// ################### 1-6 ##########################
 	}
 }
