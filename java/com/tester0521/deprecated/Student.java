@@ -1,5 +1,6 @@
 
-package lib;
+
+package com.tester0521.deprecated;
 
 import java.util.*;
 import lib.Grade;

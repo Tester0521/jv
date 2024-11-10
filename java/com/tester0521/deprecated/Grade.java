@@ -1,4 +1,6 @@
-package lib;
+
+
+package com.tester0521.deprecated;
 
 public enum Grade {
 	two(2), three(3), four(4), five(5);
