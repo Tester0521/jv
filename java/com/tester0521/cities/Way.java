@@ -1,15 +1,15 @@
-package com.tester0521.deprecated;
+package com.tester0521.cities;
 
-public class Ways {
+public class Way {
     private City city;
-    int cost;
+    private int cost;
 
-    public Ways(City city, int cost){
+    public Way(City city, int cost){
         this.city = city;
         this.cost = cost;
     }
 
-    public City toDo(){
+    public City getCity(){
         return city;
     }
 
@@ -18,6 +18,6 @@ public class Ways {
     }
 
     public String toString(){
-        return city.getName() + " - " + cost + "$";
+        return city.getName() + " - " + "$" + cost;
     }
 }
