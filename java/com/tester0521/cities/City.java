@@ -45,10 +45,11 @@ public class City implements Cloneable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof City city) ) return false;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof City city) ) return false;
+        
 
-        return Objects.equals(name, city.name) && Objects.equals(ways, city.ways);
+        return name == city.name && ways == city.ways;
     }
 
     @Override
