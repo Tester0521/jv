@@ -9,8 +9,8 @@ public class Name {
 		this.surname = surname;
 	}
 
-	public String getName() 	{ return name; }
-	public String getSurname()  { return surname; }
+	public String getName()    { return name; }
+	public String getSurname() { return surname; }
 
 	@Override public boolean equals(Object o) {
         if (this == o) return true;
