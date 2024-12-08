@@ -15,22 +15,13 @@ public class Line implements Cloneable {
         this(new Point(x1, y1), new Point(x2, y2));
     }
 
-    public Point getStart() { return p1; }
-
-    public Point getEnd() { return p2; }
-
-    public Line setStart(int x, int y) { p1 = new Point(x, y); return this; }
-
-    public Line setEnd(int x, int y) { p2 = new Point(x, y); return this; }
-
-    public String toString() { return p1 + " " + p2; }
-
-    public int len() {
-        // int dx = p1.getX() - p2.getX();
-        // int dy = p1.getY() - p2.getY();
-
-        // return (int) Math.round(Math.sqrt(dx * dx + dy * dy));
-        return (int) Math.round(Math.sqrt(Math.pow(p1.getX() - p2.getX(), 2) - Math.pow(p1.getY() - p2.getY(), 2)));
+    public Point  getStart()             {                       return p1           ; }
+    public Point  getEnd()               {                       return p2           ; }
+    public Line   setStart(int x, int y) { p1 = new Point(x, y); return this         ; }
+    public Line   setEnd(int x, int y)   { p2 = new Point(x, y); return this         ; }
+    public String toString()             {                       return p1 + " " + p2; }
+    public int    len() {
+        return (int) Math.round(Math.sqrt(Math.pow(p1.getX() - p2.getX(), 2) + Math.pow(p1.getY() - p2.getY(), 2)));
     }
 
     @Override public boolean equals(Object o) {
@@ -45,7 +36,7 @@ public class Line implements Cloneable {
 
     @Override public Line clone() throws CloneNotSupportedException {
         return ((Line) super.clone())
-                        .setStart(this.getStart().getX(), this.getStart().getY())
-                        .setEnd(this.getEnd().getX(), this.getEnd().getY());
+                            .setStart(this.getStart().getX(), this.getStart().getY())
+                            .setEnd(this.getEnd().getX(), this.getEnd().getY());
     }
 }
